@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post</title>
+    <link rel="stylesheet" href="../styles/common.css">
+    <link rel="stylesheet" href="../styles/post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montez|Ubuntu+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+          href=
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+     <!-- TODO: Include all your code for the header and home page here -->
+  <div>
+    <header>
+      <span class="a">
+        <button type="button" class="Top-right" data-toggle="modal" data-target="#SignUpCenter" data-backdrop="static" data-keyboard="false"> Sign Up</button>
+        <button type="button" class="Top-right" data-toggle="modal" data-target="#SignInCenter" data-backdrop="static" data-keyboard="false">Sign In </button>
+      </span>
+    </header>
+    <div id="main-head">
+    <div class="header">
+      <p id="head">ScriBBler</p>
+      <p id="sub-head">Explore, Imagine, Create</p>
+    </div>
+    </div>
+      <!--Sign Up Modal-->
+      
+    
+      <!-- Modal Content-->
+      <div class="modal fade" id="SignUpCenter" tabindex="-1" role="dialog"  aria-labelledby="SignUpCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="SignUpTitle">Get Started</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"> &times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <label for="name">Name</label>
+              <input type="text" name="name" id="" placeholder="Enter your name" required="true">
+              <label for="username">Username</label>
+              <input type="text" name="username" id="" placeholder="Enter your username" required="true">
+              <label for="password1">Password</label>
+              <input type="password" name="password1" id="" placeholder="Enter your password" required="true">
+              <label for="confirm">Confirm Password</label>
+              <input type="password" name="confirm" id="" placeholder="Re-enter your password" required="true">
+            </div>
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-success" id="SignUp" required="true">Sign Up</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Sign Up Modal ends here -->
+
+      <!--Sign In Modal-->
+      
+      <!--Modal Content 2-->
+      <div class="modal fade " id="SignInCenter" tabindex="-1" role="dialog" aria-labelledby="SignInCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="SignInTitle">Welcome Back!</h3>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true"> &times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <label for="username">Username</label>
+              <input type="text" name="username" id="" required="true" placeholder="Enter your username">
+              <label for="password1">Password</label>
+              <input type="password" name="password1" id="" required="true" placeholder="Enter your password">
+            </div>
+              <button type="submit" class="btn btn-success" id="SignIn" required="true">Sign In</button>
+            <div>
+              <h4 class="text-center">Not a member?
+               <span class="calling" data-toggle="modal" data-target="#SignUpCenter"data-dismiss="modal" data-backdrop="static" data-keyboard="false">
+                Sign Up
+               </span>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!--Sign In Modal ends here-->
+
+    <div class="post-container">
+        <div class="post-title" contentEditable="false">
+            <h4 id="postTitle">Exapmle of Lorem Ipsum.</h4>
+        </div>
+
+        <div id="EditBtnContainer" class="flex-container">
+            <span class="post">Skylar Robbie</span>
+            <button type="button" id="editPostButton" onclick="toggleEditSave()">Edit<i class="fa fa-edit"></i></button>
+        </div>
+
+        <div id="post-content" contentEditable="false">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque accumsan sapien risus, a imperdiet mauris consequat tincidunt.
+            Proin at magna ut metus ultricies cursus vel nec tortor. Sed id odio id odio mattis dignissim a et diam. Aenean et posuere ex. 
+            In hac habitasse platea dictumst. Mauris ut consectetur urna. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+            Etiam varius ex in faucibus pretium. Etiam dapibus ex imperdiet mi placerat imperdiet. Etiam elementum arcu et lacinia lobortis. 
+            Integer vitae turpis ut erat lacinia rhoncus consectetur et justo.
+            Sed nec orci lacinia, egestas ex ultricies, ultricies felis. Morbi non felis erat. Cras sollicitudin, diam condimentum dignissim lacinia,
+            justo velit faucibus sapien, id convallis ante risus in magna. Donec cursus id risus ut congue. Ut ornare nisi nulla, et tempus urna tempor gravida.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis maximus at neque ac maximus. Praesent ultricies orci
+            dolor, nec interdum turpis tristique consequat. Maecenas nec posuere sem. Sed aliquet, lorem id mollis venenatis, erat ex ornare enim, nec posuere 
+            felis sapien vel quam. Vivamus ac ullamcorper mi, nec vulputate urna. Ut interdum leo id leo rutrum placerat. Vivamus sagittis volutpat odio hendrerit vehicula.
+            Integer ac eleifend risus. Nam eget lectus ipsum. Nullam rutrum mi vel laoreet cursus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Vivamus pretium neque eget nunc rutrum commodo. Nunc euismod viverra libero, et volutpat urna efficitur in. Phasellus placerat feugiat diam. 
+            Nullam mauris nisi, varius eu vestibulum et, lobortis et quam.
+            Etiam non ornare enim. Aliquam tempus porta sagittis. Etiam feugiat est nec vestibulum pretium. Maecenas viverra elit eros, eget fringilla nisl porttitor nec.
+            Donec placerat ligula eros, eu ultricies arcu sollicitudin in. Morbi scelerisque malesuada posuere. Pellentesque ut tempor massa. Nunc ultricies iaculis tellus.
+            Curabitur non porttitor ex, non ornare enim.
+        </div>
+
+        <div class="like-post">
+            <button id="likeBtn" onclick="likePost()">
+                <i class="fa fa-thumbs-up"></i>Like
+            </button>
+            <span id="likesCount">Be the first one to like this!</span>
+        </div>
+
+        <div>
+            <form class="comment-form">
+                <label for="commentText"></label>
+                <textarea placeholder="Leave a comment..." id="commentText" rows="5" name="Content"></textarea><br>
+                <button type="button" class="add-comment-btn" onClick="addComment()">Comment</button>
+            </form>
+
+            <p class="allCommentsHeading">All Comments</p>
+            <div id="allCommentsBox">
+                <!-- all comments are added here -->
+            </div>
+        </div>
+    </div>
+    <script src="../javascript/post.js"></script>
+</body>
+</html>
